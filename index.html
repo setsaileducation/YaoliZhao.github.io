@@ -1,68 +1,23 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-	<title></title>
-	<style type="text/css">
-		#_div{
-			width: 250px;
-			height: 250px;
-			border: 2px solid #2D2D2D;
-			border-radius: 2px;
-			margin: 75px auto;
-			position: relative;
-		}
-		#_div>div:first-child{
-			width: 250px;
-			height: 250px;
-			background: #DE5347;
-			position: absolute;
-			top: 0;
-			left: 0;
-			transform: rotateX(0.0);
-			-webkit-transform: rotateX(0.0);
-			-moz-transform: rotateX(0.0);
-			-o-transform: rotateX(0.0);
-			-ms-transform: rotateX(0.0);
-			transition: all 0.38s ease-in 0.0s;
-			z-index: 500;
-		}
-		#_div:hover >div:first-child{
-			top: 125px;
-			transform: rotateX(-90.0deg);
-			-webkit-transform: rotateX(-90.0deg);
-			-moz-transform: rotateX(-90.0deg);
-			-o-transform: rotateX(-90.0deg);
-			-ms-transform: rotateX(-90.0deg);
-		}
-		#_div>div:last-child{
-			width: 250px;
-			height: 250px;
-			background: #FFCE42;
-			position: absolute;
-			top: -125px;
-			left: 0;
-			transform: rotateX(90.0deg);
-			-webkit-transform: rotateX(90.0deg);
-			-moz-transform: rotateX(90.0deg);
-			-o-transform: rotateX(90.0deg);
-			-ms-transform: rotateX(90.0deg);
-			transition: all 0.38s ease-in 0.0s;
-		}
-		#_div:hover >div:last-child{
-			top: 0;
-			transform: rotateX(0.0);
-			-webkit-transform: rotateX(0.0);
-			-moz-transform: rotateX(0.0);
-			-o-transform: rotateX(0.0);
-			-ms-transform: rotateX(0.0);
-		}
-	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>轮播效果</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="JavaScript.js"></script>
 </head>
 <body>
-	<div id="_div">
-		<div><img src="img/1.png" title="1" /></div>
-		<div><img src="img/2.png" title="2" /></div>
+<div class="banner">
+	<div class="banner_pic" id="banner_pic">
+		<div class="current"><img src="images/01.jpg" alt="" /></div>
+		<div class="pic"><img src="images/02.jpg" alt="" /></div>
+		<div class="pic"><img src="images/03.jpg" alt="" /></div>
 	</div>
+	<ol id="button">
+		<li class="current"></li>
+		<li class="but"></li>
+		<li class="but"></li>
+	</ol>
+</div>
 </body>
 </html>
