@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>...</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="_bootstrap/css/bootstrap.min.css" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<style type="text/css">
+		body{
+			padding-top: 50px;
+		}
+		.carousel{
+			height: 500px;
+			background-color: #000;
+		}
+		.carousel .item{
+			height: 500px;
+			background-color: #000;
+		}
+		.carousel img{
+			width: 100%;
+		}
+		@media only screen and (max-width: 1024px){
+			.carousel{
+				height: 350px;
+				background-color: pink;
+			}
+			.carousel .item{
+				height: 350px;
+				background-color: pink;
+			}
+			.carousel img{
+				width: 100%;
+			}
+			.item button{
+
+			}
+		}
+		@media only screen and (max-width: 765px){
+			.carousel{
+				height: 280px;
+				background-color: purple;
+			}
+			.carousel .item{
+				height: 280px;
+				background-color: purple;
+			}
+			.carousel img{
+				width: 100%;
+			}
+			
+		}
+		@media only screen and (max-width: 570px){
+			.carousel{
+				height: 220px;
+				background-color: green;
+			}
+			.carousel .item{
+				height: 220px;
+				background-color: green;
+			}
+			.carousel img{
+				width: 100%;
+			}
+			.item h4,.item p{
+				display: none;
+			}
+		@media only screen and (max-width: 414px){
+			.carousel{
+				height: 180px;
+				background-color: red;
+			}
+			.carousel .item{
+				height: 180px;
+				background-color: red;
+			}
+			.carousel img{
+				width: 100%;
+			}
+			.item h4,.item p{
+				display: none;
+			}
+			.item button{
+				height: 25px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	   <div class="container">
+	   		<div class="navbar-header">
+	   		   <button type="button" class="navbar-toggle" data-toggle="collapse" 
+	   		      data-target="#example-navbar-collapse">
+	   		      <span class="sr-only">切换导航</span>
+	   		      <span class="icon-bar"></span>
+	   		      <span class="icon-bar"></span>
+	   		      <span class="icon-bar"></span>
+	   		   </button>
+	   		   <a class="navbar-brand" href="#">Logo</a>
+	   		</div>
+	   		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+	   		   <ul class="nav navbar-nav">
+	   		      <li class="active"><a href="#">综述</a></li>
+	   		      <li><a href="#">简述</a></li>
+	   		      <li class="dropdown">
+	   		         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	   		            特点<b class="caret"></b>
+	   		         </a>
+	   		         <ul class="dropdown-menu">
+	   		            <li><a href="#">Chrome</a></li>
+	   		            <li><a href="#">Firefox</a></li>
+	   		            <li><a href="#">Safari</a></li>
+	   		            <li><a href="#">Opera</a></li>
+	   		            <li><a href="#">IE</a></li>
+	   		         </ul>
+	   		      </li>
+	   		      <li><a class="" href="#myModal" data-toggle="modal">关于</a></li>
+	   		   </ul>
+	   		</div>
+	   </div>
+	</nav>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+		            <button type="button" class="close" 
+		               data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		            </button>
+		            <h4 class="modal-title" id="myModalLabel">
+		             	关于
+		            </h4>
+	            </div>
+		        <div class="modal-body">
+		            ......
+		        </div>
+	         	<div class="modal-footer">
+	            	<button type="button" class="btn btn-default" data-dismiss="modal">
+	            	close
+	            	</button>
+	         	</div>
+	        </div>
+	    </div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Carousel -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	   <ol class="carousel-indicators">
+	      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	   </ol>
+	   <div class="carousel-inner" role="listbox">
+	      <div class="item active">
+	         <img src="img/IMG_1428.jpg" alt="">
+	         <div class="carousel-caption">
+	         	<h4>第一张图片</h4>
+	         	<p> 快乐幸福联系基金基金法点点滴滴</p>
+	         	<p><button class="btn btn-default btn-sm">点击下载</button></p>
+	         </div>
+	      </div>
+	      <div class="item">
+	         <img src="img/IMG_1428.jpg" alt="">
+	         <div class="carousel-caption">
+	         	<h4>第二张图片</h4>
+	         	<p> 快乐幸福联系基金基金法点点滴滴</p>
+	         	<p><button class="btn btn-default btn-sm">点击下载</button></p>
+	      	 </div>
+	      </div>
+	      <div class="item">
+	         <img src="img/IMG_1428.jpg" alt="">
+	         <div class="carousel-caption">
+	         	<h4>第三张图片</h4>
+	         	<p> 快乐幸福联系基金基金法点点滴滴</p>
+	         	<p><button class="btn btn-default btn-sm">点击下载</button></p>
+	         </div>
+	      </div>
+	   </div>
+	   <a class="carousel-control left" href="#carousel-example-generic" role="button"
+	      data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a>
+	   <a class="carousel-control right" href="#carousel-example-generic" role="button"
+	      data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+	</div> 
+	<!-- Content -->
+	<div class="container" style="margin-top: 28px;">
+	   <div class="row">
+	      <div class="col-md-4 col-sm-4 text-center">
+	      	<img src="" />
+	      	<h4>Chrome</h4>
+	      	<p>你在少女vval是大多数的凯迪拉克目的达到你的分v坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷</p>
+	      	<p><a class="btn btn-default" href="">点击下载</a></p>
+	      </div>
+	      <div class="col-md-4 col-sm-4 text-center">
+      		<img src="" />
+      		<h4>Firefox</h4>
+      		<p>你在少女vval是大多数的凯迪拉克目的达到你的分v坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷</p>
+      		<p><a class="btn btn-default" href="">点击下载</a></p>
+	      </div>    
+	      <div class="col-md-4 col-sm-4 text-center">
+	      	<img src="" />
+	      	<h4>IE</h4>
+	      	<p>你在少女vval是大多数的凯迪拉克目的达到你的分v坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷坎坎坷坷</p>
+	      	<p><a class="btn btn-default" href="">点击下载</a></p>
+	      </div>     
+	   </div>
+	   <hr style="margin-bottom: 25px" />
+	</div>
+	<div class="container">
+		<ul class="nav nav-tabs" role="tablist">
+		   <li class="active"><a href="#Chrome" role="tab" data-toggle="tab">Chrome</a></li>
+		   <li><a href="#Firefox" role="tab" data-toggle="tab">Firefox</a></li>
+		   <li><a href="#Safari" role="tab" data-toggle="tab">Safari</a></li>
+		   <li><a href="#Opera" role="tab" data-toggle="tab">Opera</a></li>
+		   <li><a href="#IE" role="tab" data-toggle="tab">IE</a></li>
+		</ul>
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="Chrome">
+		  	<div class="row">
+		  		<div class="col-md-7">
+		  			<h3 style="color: #31708F">Google Chrome<span class="text-muted" style="font-size: 12px;margin-left: 5px;">使用最广的浏览器</span></h3>
+		  			<p class="">谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器</p>
+		  		</div>
+		  		<div class="col-md-5">
+		  			<img src="" />
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="tab-pane fade" id="Firefox">
+		  	<div class="row">
+		  		<div class="col-md-5">
+		  			<img src="" />
+		  		</div>
+		  		<div class="col-md-7">
+		  			<h3 style="color: #31708F">Mozilla Firefox<span class="text-muted" style="font-size: 12px;margin-left: 5px;">美丽的狐狸</span></h3>
+		  			<p class="">谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器谷歌浏览器</p>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="tab-pane fade" id="Safari">
+		  	
+		  </div>
+		  <div class="tab-pane fade" id="Opera">
+		  	
+		  </div>
+		  <div class="tab-pane fade" id="IE">
+		  	
+		  </div>
+		</div>
+		<hr />
+		<footer style="margin-bottom: 25px">
+			<p class="pull-right"><a href="#top">回到顶部</a></p>
+			<p>2014&nbsp;&nbsp;慕课网</p>
+		</footer>
+	</div>
+
+
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="_jQuery/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  	<script src="_bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
