@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#article{
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 80px;
+	border: 1px solid #b1b7c7;
+	border-radius: 8px;
+}
+#article header #img{
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+	margin-left: 536px;
+	margin-top: 120px;
+
+}
+#article form #input{
+	width: 280px;
+	height: 35px;
+	border-radius: 5px;
+	margin-left: 460px;
+	margin-top: 0;
+	outline: none;
+	
+	border: 1px solid rgba(038, 198, 218, 0.85);
+	font-size: 15px;
+}
+
+#article form #p{
+	width: 280px;
+	height: 35px;
+	margin-left: 462px;
+	margin-top: 15px;
+	font-size: 13px;
+	color: #b1b7c7;
+}	
+
+#article form #button{
+	width: 280px;
+	height: 35px;
+	border-radius: 5px;
+	margin-left: 462px;
+	margin-top: 15px;
+	background-color: rgba(000, 215, 98, 0.75);
+	outline-width: 0;
+	border-width: 0;
+	font-family: "Times new Roman";
+	font-size: 17px;
+	color: white;
+	cursor: pointer;
+	-webkit-transition: background-color .5s ease .1s;
+	-moz-transition: background-color .5s ease .1s;
+	-o-transition: background-color .5s ease .1s;
+	-ms-transition: background-color .5s ease .1s;
+}
+#article form #button:hover{
+	background-color: rgba(000, 215, 98, 1.0);
+}
