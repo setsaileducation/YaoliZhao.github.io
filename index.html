@@ -18,7 +18,7 @@ function startWorker() {
             w = new Worker("demo_workers.js");
         }
         w.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data+"haha";
+            document.getElementById("result").innerHTML = event.data;
         };
     } else {
         document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
