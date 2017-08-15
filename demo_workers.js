@@ -3,7 +3,7 @@ var i=0;
 function timedCount()
 {
     i=i+1;
-    //postMessage(i);
+    postMessage(i);
     setTimeout("timedCount()",500);
 }
 
