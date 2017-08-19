@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>企业网站实例</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/style.js"></script>
+	<script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script><!-- charset 用来设置脚本文件的编码方式 -->
+
+	<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script><!--引入myFocus库-->
+	<script type="text/javascript" src="js/mf-pattern/mF_YSlider.js"></script><!--引入风格js文件-->
+	<link href="js/mf-pattern/mF_YSlider.css" type="text/css" /><!--引入风格css文件-->
+
+	<!--简单的调用 只设置它的盒子id,其它参数全部默认设置: -->
+	<script type="text/javascript">
+		myFocus.set({id:'roasting'});
+	</script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="header_content">
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#" onclick="AddFavorite(window.location,document.title)">加为收藏</a></li><!-- window.location 用来获取当前网页地址 document.title 用来获取当前网页的标题 -->
+				<li><a href="#" onclick="SetHome(window.location)">设为首页</a></li>
+			</ul>
+		</div>
+	</header>
+	<article class="article">
+		<div class="article_logo">
+			<div class="logo_left">
+				<img src="img/logo.jpg" alt="logo" />
+			</div>
+			<div class="logo_right">
+				<img src="img/tel.jpg" alt="tel" /><span>24小时服务热线:000-000-000</span>
+			</div>
+		</div>
+		<nav class="nav">
+			<div class="nav_left">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">在线课程</a></li>
+					<li><a href="#">课程中心</a></li>
+					<li><a href="#">新闻动态</a></li>
+					<li><a href="#">人才招聘</a></li>
+					<li><a href="#">关于慕课</a></li>
+				</ul>
+			</div>
+			<div class="nav_right">
+				<form>
+					<input class="search" type="text" name="" placeholder="&nbsp;&nbsp;search" /><!-- placeholder 用于给输入框添加提示信息  --><input class="button" type="button" name="" value="查询" />
+					<!--两个 input 并行是为了清除默认样式-->
+				</form>
+			</div>
+		</nav>
+		<div id="roasting"><!--焦点图盒子-->
+		  <div class="loading"><img src="img/loading.gif" alt="请稍候..." /></div><!--载入画面(可删除)-->
+		  <div class="pic"><!--内容列表(li数目可随意增减)-->
+		  	<ul>
+		        <li><a href="#"><img src="img/ad_1.jpg" thumb="" alt="" text="1" /></a></li><!-- alt 图片的描述文字 text 图片更详细的描述文字(需要风格支持 可以省略) -->
+		        <li><a href="#"><img src="img/ad_2.jpg" thumb="" alt="" text="2" /></a></li>
+		        <li><a href="#"><img src="img/ad_3.jpg" thumb="" alt="" text="3" /></a></li>
+		  	</ul>
+		  </div>
+		</div>
+		<div class="article_main">
+			<div class="news">
+				<div class="title">
+					<h2>&nbsp;&nbsp;&nbsp;&nbsp;新闻中心</h2><a href="#">More&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				</div>
+				<div class="mews_pic">
+					<img src="img/news.jpg" alt="" />
+					<h2><a href="#">520  慕女神喊你来表白!</a></h2>
+					<p>
+						活动时间：5月20日—5月25日<br /><!-- 用 <br /> 是为了三行话分行显示 -->
+			            获奖公布时间：5月26日<br />
+			            <a href="#">Learn More&gt;&gt;</a>
+					</p>
+				</div>
+				<div class="mews_list">
+					<ul>
+				        <li><span>2014-06-01</span> <a href="#">【慕客访谈 用户篇】“有为屌丝”在路上</a></li><!-- 日期放左侧 解决IE浏览器兼容性问题 -->
+				        <li><span>2014-06-01</span><a href="#">【有奖活动】给父亲的三行书信</a></li>
+				        <li><span>2014-05-30</span><a href="#">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+				        <li><span>2014-05-28</span><a href="#" title="">【慕课访谈】破茧成蝶——美女程序员的蜕变史</a></li>
+			        </ul>
+				</div>
+			</div>
+			<div class="course">
+				<div class="course_title">
+					<h2>&nbsp;&nbsp;&nbsp;&nbsp;课程中心</h2><a href="#">More&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				</div>
+				<div class="course_pic">
+					<img src="img/css.jpg" alt="" />
+					<h2><a href="#">CSS圆角进化论</a></h2>
+					<p>
+						CSS圆角的实现，经历了三大发展阶段：背景图片方式、CSS2.0+HTML标签模拟、CSS3.0圆角属性）。本案例详细讲解每一种的实现方式，并对实现的优缺点进行对比分析。
+					</p>
+				</div>
+				<div class="product_type">
+			        <ul>
+				        <li><a href="#">PHP开发</a></li>
+				        <li><a href="#">前端开发</a></li>
+				        <li><a href="#">JAVA开发</a></li>
+				        <li><a href="#">Android开发</a></li>
+			        </ul>
+			    </div>
+
+			</div>
+			<div class="sidebar">
+				
+			</div>
+		</div>
+	</article>
+</body>
+</html>
