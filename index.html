@@ -6,13 +6,13 @@
 	<title>企业网站实例</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" src="js/style.js"></script>
-	<script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script><!-- charset 用来设置脚本文件的编码方式 -->
+	<script type="text/javascript" src="js/setHomeSetFav.js" charset=""></script><!-- charset 用来设置脚本文件的编码方式 -->
 
 	<script type="text/javascript" src="js/myfocus-2.0.4.min.js"></script><!--引入myFocus库-->
 	<script type="text/javascript" src="js/mf-pattern/mF_YSlider.js"></script><!--引入风格js文件-->
 	<link href="js/mf-pattern/mF_YSlider.css" type="text/css" /><!--引入风格css文件-->
 
-	<!--简单的调用 只设置它的盒子id,其它参数全部默认设置: -->
+	<!--简单的调用 只设置它的盒子id,其它参数全部默认设置 -->
 	<script type="text/javascript">
 		myFocus.set({id:'roasting'});
 	</script>
@@ -60,9 +60,9 @@
 			  <div class="loading"><img src="img/loading.gif" alt="请稍候..." /></div><!--载入画面(可删除)-->
 			  <div class="pic"><!--内容列表(li数目可随意增减)-->
 			  	<ul>
-			        <li><a href="#"><img src="img/ad_1.jpg" thumb="" alt="" text="1" /></a></li><!-- alt 图片的描述文字 text 图片更详细的描述文字(需要风格支持 可以省略) -->
-			        <li><a href="#"><img src="img/ad_2.jpg" thumb="" alt="" text="2" /></a></li>
-			        <li><a href="#"><img src="img/ad_3.jpg" thumb="" alt="" text="3" /></a></li>
+			        <li><a href="#"><img src="img/ad_1.jpg" thumb="" alt="" text="0" /></a></li><!-- alt 图片的描述文字 text 图片更详细的描述文字(需要风格支持 可以省略) -->
+			        <li><a href="#"><img src="img/ad_2.jpg" thumb="" alt="" text="0" /></a></li>
+			        <li><a href="#"><img src="img/ad_3.jpg" thumb="" alt="" text="0" /></a></li>
 			  	</ul>
 			  </div>
 			</div>
@@ -82,10 +82,10 @@
 					</div>
 					<div class="mews_list">
 						<ul>
-					        <li><span>2014-06-01</span> <a href="#">【慕客访谈 用户篇】“有为屌丝”在路上</a></li><!-- 日期放左侧 解决IE浏览器兼容性问题 -->
+					        <li><span>2014-06-01</span><a href="#">【慕客访谈 用户篇】“有为屌丝”在路上</a></li><!-- 日期放左侧 解决IE浏览器兼容性问题 -->
 					        <li><span>2014-06-01</span><a href="#">【有奖活动】给父亲的三行书信</a></li>
 					        <li><span>2014-05-30</span><a href="#">《程序猿，请晒出你的童年》活动获奖公告</a></li>
-					        <li><span>2014-05-28</span><a href="#" title="">【慕课访谈】破茧成蝶——美女程序员的蜕变</a></li>
+					        <li><span>2014-05-28</span><a href="#" title="">【慕课访谈】破茧成蝶--美女程序员的蜕变</a></li>
 				        </ul>
 					</div>
 				</div>
@@ -111,13 +111,14 @@
 
 				</div>
 				<div class="sidebar">
-					<div class="video">
+					<div class="sidebar_title">
 						<h2>&nbsp;&nbsp;&nbsp;&nbsp;媒体聚焦</h2><a href="#">More&gt;&gt;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-						<video width="230" controls>
-						  <source src="audio/mov_c.mp4" type="video/mp4" />
-						  您的浏览器不支持 HTML5 video 标签
-						</video>
-					</div>
+					</div>	
+					<video class="video" width="230" controls>
+					  <source src="audio/mov_c.mp4" type="video/mp4" />
+					  您的浏览器不支持 HTML5 video 标签
+					</video>
+					
 					<img src="img/app.jpg" alt="" width="230" />
 				</div>
 			</div>

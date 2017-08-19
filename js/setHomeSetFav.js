@@ -22,7 +22,7 @@ function AddFavorite(sURL, sTitle)
         catch (e)
         {
             
-            alert("收藏失败,请通过浏览器手动设置");
+            alert("收藏失败,请通过浏览器手动收藏");
             
         }
         

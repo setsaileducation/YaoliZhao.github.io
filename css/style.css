@@ -150,14 +150,14 @@ a{
 	height: 250px;
 	margin-top: 5px;
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: 7px;
 }
 .article .article_main .news{
 	width: 338px;
 	height: 250px;
 	border: 1px solid #e8e8e8;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .article .article_main .news .title{
 	height: 35px;
@@ -194,7 +194,7 @@ a{
 	height: 88px;
 	margin-left: 5px;
 	margin-right: 8px;
-	border-radius: 2px;
+	border-radius: 3px;
 	float: left;
 }
 .mews_pic h2{
@@ -212,6 +212,7 @@ a{
 .mews_list{
 	margin-left: 5px;
 	margin-top: 20px;
+	border-radius: 3px;
 }
 .mews_list ul li{
 	background-image: url("../img/list.jpg");/*用背景设置项目符号*/
@@ -227,9 +228,16 @@ a{
 	width: 410px;
 	height: 250px;
 	border: 1px solid #e8e8e8;
+	border-radius: 5px;
 	margin: 0 7px;/*上下间距为 0 左右间距为 7px*/
 	float: left;
 }
+.article .article_main .course .course_title{
+	width: 100%;
+	height: 35px;
+	border-bottom: 2px solid #e8e8e8;
+}
+
 .article .article_main .course .course_title h2{
 	width: 70%;
 	height: 35px;
@@ -248,14 +256,19 @@ a{
 	float: left;
 	color: #785f55;
 }
-
+.course_pic{
+	width: 100%;
+	margin-top: -5px;
+	border-radius: 3px;
+}
 .course_pic img{
 	display: inline-block;
 	width: 158px;
 	height: 105px;
 	margin-left: 5px;
 	margin-right: 8px;
-	border-radius: 2px;
+	border-radius: 3px;
+	margin-top: 5px;
 	float: left;
 }
 .course_pic h2{
@@ -265,14 +278,14 @@ a{
 	margin-top: 8px;
 }
 .course_pic p{
-	margin-top: 28px;
+	// margin-top: 28px;
 	line-height: 20px;/*设置行高 使每行文字之间有一定距离*/
 	/*段落内容中行与行之间的间距用 line-height */
 }
 .product_type{
 	width: 100%;
 	height: 25px;
-	border-radius: 2px;
+	border-radius: 3px;
 	margin-top: 55px;
 	background-color: #f9f9f9;
 }
@@ -288,7 +301,13 @@ a{
 .article .article_main .sidebar{
 	width: 230px;
 	height: 250px;
+	border-radius: 5px;
 	float: left;
+}
+.sidebar_title{
+	width: 100%;
+	height: 35px;
+	border-bottom: 2px solid #e8e8e8;
 }
 .article .article_main .sidebar h2{
 	width: 70%;
@@ -310,6 +329,7 @@ a{
 }
 .article .article_main .sidebar .video{
 	width: 230px;
+	margin-top: 7px;
 	border-radius: 3px;
 	overflow: hidden;
 }
