@@ -3,28 +3,63 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="shortcut icon" href="src/title.ico" />
-	<title>Happy teachers'day</title>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/unslider.css">
+	<link rel="stylesheet" href="css/unslider-dots.css">
 	<style type="text/css" media="screen">
-		#one:focus{
-			box-shadow: 0 0 2px 2px rgba(078,195,248,1.0);
-		}
-		#two:hover{
-			background-color: rgba(038,198,212,1.0);
-			cursor: pointer;
-		}
+	/*	.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }*/
 	</style>
-	<script type="text/javascript" src="val.js"></script>
 </head>
 <body>
-	<div style="width: 375px;height: 250px;margin: 250px auto; border-radius: 8px;padding-top: 25px;">
-		<div style="width: 350px;height: 225px; margin: 0 auto; border-radius: 8px; border: 1px solid #8e8e8e;">
-			<div style="display: inline-block;width: 100px; margin-left: 125px;"><img src="src/flower.png" alt="" /></div>
-			<input id="one" type="password" name="" placeholder="&nbsp;&nbsp;input your password:" required style="width: 198px; height: 22px; border-radius: 5px; border: 1px solid rgba(078,195,248,1.0); margin-left: 75px;" /><br />
-			<p style="font-size: 12px; text-align: center;height: 12px; line-height: 12px; color: #8e8e8e;">'submit'之前请打开设备音响</p>
-			<input id="two" type="button" value="submit" style="width: 198px; height: 25px; border-radius: 3px; margin-left: 75px;margin-top: 5px; background-color: rgba(038,198,212,0.85); color: white; border: 1px solid rgba(038,198,212,0.85);" />
-		</div>
+	<div class="banner">
+		<ul>
+			<li style="background-image: url('img/sunset.jpg');">
+				<div class="inner">
+					<h1>The jQuery slider that just slides.</h1>
+					<p>就是这个不到3kb的插件！没有奇特的特效或无用的标签。</p>
+
+					<a class="btn" href="#download">下载</a>
+				</div>
+			</li>
+
+			<li style="background-image: url('img/wood.jpg');">
+				<div class="inner">
+					<h1>Fluid, flexible, fantastically minimal.</h1>
+					<p>Use any HTML in your slides, extend with CSS. You have full control.</p>
+
+					<a class="btn" href="#download">下载</a>
+				</div>
+			</li>
+
+			<li style="background-image: url('img/subway.jpg');">
+				<div class="inner">
+					<h1>开源</h1>
+					<p>Unslider的所有源码都托管在GitHub上。</p>
+
+					<a class="btn" href="//github.com/idiot/unslider">参与</a>
+				</div>
+			</li>
+
+			<li style="background-image: url('img/shop.jpg');">
+				<div class="inner">
+					<h1>Uh, that’s about it.</h1>
+					<p>I just wanted to show you another slide.</p>
+
+					<a class="btn" href="#download">下载</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/unslider.js"></script> <!-- but with the right path! -->
+	<!-- <script src="js/swie.js"></script> -->
+	<!-- <script src="js/event.js"></script> -->
+	<script>
+		$(function() { $('.banner').unslider() })
+	</script>
 </body>
 </html>
