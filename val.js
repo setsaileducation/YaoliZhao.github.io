@@ -4,6 +4,9 @@ window.onload=function () {
 		if (Number(a)===5050){
 			window.open('love/index.html','_self',"width=300,height=200,menubar=yes,toolbar=yes,status=no,srollbars=yes");
 		}
+		else if (Number(a)===9090){
+			window.open('loves/index.html','_self',"width=300,height=200,menubar=yes,toolbar=yes,status=no,srollbars=yes");
+		}
 		else if(a===''){
 			alert("The password cannot be empty!");
 		}
