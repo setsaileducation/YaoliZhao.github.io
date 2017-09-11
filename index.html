@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="css/unslider.css" />
-	
 </head>
 <body>
 	<div class="banner" id="banner">
@@ -18,7 +16,6 @@
 					<a class="btn" href="">测试</a>
 				</div>
 			</li>
-
 			<li style="background-image: url('img/wood.jpg');">
 				<div class="inner">
 					<h1>Fluid flexible fantastically minimal</h1>
@@ -26,7 +23,6 @@
 					<a class="btn" href="">下载</a>
 				</div>
 			</li>
-
 			<li style="background-image: url('img/subway.jpg');">
 				<div class="inner">
 					<h1>开源</h1>
@@ -34,7 +30,6 @@
 					<a class="btn" href="">测试</a>
 				</div>
 			</li>
-
 			<li style="background-image: url('img/shop.jpg');">
 				<div class="inner">
 					<h1>Uh that is about it</h1>
@@ -43,55 +38,33 @@
 				</div>
 			</li>
 		</ul>
-		<!-- <ol class="dots">
-			<li class="dot active">1</li>
-			<li class="dot">2</li>
-			<li class="dot">3</li>
-			<li class="dot">4</li>
-		</ol> -->
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/unslider.min.js"></script>
 	<script>
 			var index_li=0;
-			
 			$('.banner').unslider({
-				
 				speed: 500,               
 				delay: 5000,              
 				complete: function() {
 					index_li++;
-					
-					
-					
 				},  
 				keys: true,               
 				dots: true,   
-
 				fluid: true             
 			});
-
-
-
-
 			var banner_ul=document.getElementById('banner_ul');
-			
-			
-			
 			function load() {
 			var banner=document.getElementById('banner');
-			
 				banner.addEventListener('touchstart',touch, false);
 				banner.addEventListener('touchmove',touch, false);
 				banner.addEventListener('touchend',touch, false);
-			
 			function touch (event){
 			    event = event || window.event;
 			    switch(event.type){
 			        case "touchstart":
 			            var touch = event.touches[0];
 			            m = touch.clientX;
-			            console.log("开始触摸的位置:"+m);
 			            break;
 			        case "touchmove":
 			            event.preventDefault();
@@ -100,8 +73,6 @@
 			        case "touchend":
 			            event.preventDefault();
 			            n= event.changedTouches[0].clientX;
-			            console.log("触摸结束的位置:"+n);
-
 			            var banner_ul=document.getElementById('banner_ul');
 			            if(m-n>50){
 			            	index_li++;
@@ -113,8 +84,6 @@
 			            	else if (index_li==1) {banner_ul.style.left="-100%";}
 			            	else if (index_li==2) {banner_ul.style.left="-200%";}
 			            	else if (index_li==3) {banner_ul.style.left="-300%";}
-			                
-			                console.log("手指左滑");
 			            }
 			            if(n-m>50){
 			                index_li--;
@@ -124,7 +93,6 @@
 			            	else if (index_li==1) {banner_ul.style.left="-100%";}
 			            	else if (index_li==2) {banner_ul.style.left="-200%";}
 			            	else if (index_li==3) {banner_ul.style.left="-300%";}
-			                console.log("手指右滑");
 			            }
 			           
 			            break;
@@ -133,6 +101,5 @@
 		}
 		window.addEventListener('load',load, false);
 	</script>
-	
 </body>
 </html>
