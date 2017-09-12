@@ -1,7 +1,7 @@
 var index_li=0;
 			$('.banner').unslider({
 				speed: 500,               
-				delay: 5000,              
+				delay: 55000,              
 				complete: function() {
 					index_li++;
 				},  
@@ -36,19 +36,19 @@ var index_li=0;
 				            		index_li=0;
 				            	}
 				            	console.log(index_li);
-				            	if (index_li==0) {banner_ul.style.left="0%";}
-				            	else if (index_li==1) {banner_ul.style.left="-100%";}
-				            	else if (index_li==2) {banner_ul.style.left="-200%";}
-				            	else if (index_li==3) {banner_ul.style.left="-300%";}
+				            	if (index_li==0) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="0%";}
+				            	else if (index_li==1) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-100%";}
+				            	else if (index_li==2) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-200%";}
+				            	else if (index_li==3) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-300%";}
 				            }
 				            if(n-m>50){
 				                index_li--;
 				                if (index_li<0) {index_li=3;}
 				                console.log(index_li);
-				            	if (index_li==0) {banner_ul.style.left="0%";}
-				            	else if (index_li==1) {banner_ul.style.left="-100%";}
-				            	else if (index_li==2) {banner_ul.style.left="-200%";}
-				            	else if (index_li==3) {banner_ul.style.left="-300%";}
+				            	if (index_li==0) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="0%";}
+				            	else if (index_li==1) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-100%";}
+				            	else if (index_li==2) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-200%";}
+				            	else if (index_li==3) {banner_ul.style.transition="left 0.5s ease 0s";banner_ul.style.left="-300%";}
 				            }
 				           
 				            break;
