@@ -35,6 +35,10 @@
 	<div id="longTap">longTap</div>
 	<div id="singleTap">singleTap</div>
 	<div id="doubleTap">doubleTap</div>
+	<div id="gesturestart">gesturestart</div>
+	<div id="gesturechange">gesturechange</div>
+	<div id="gestureend">gestureend</div>
+	
 	<script>
 		document.getElementById('tap').addEventListener("tap",function (event) { alert("tap");} );
 		document.getElementById('click').addEventListener("click",function (event) { alert("click");} );
@@ -50,6 +54,9 @@
 		document.getElementById('longTap').addEventListener("longTap",function (event) { alert("longTap");} );
 		document.getElementById('singleTap').addEventListener("singleTap",function (event) { alert("singleTap");} );
 		document.getElementById('doubleTap').addEventListener("doubleTap",function (event) { alert("doubleTap");} );
+		document.getElementById('gesturestart').addEventListener("gesturestart",function (event) { alert("gesturestart");} );
+		document.getElementById('gesturechange').addEventListener("gesturechange",function (event) { alert("gesturechange");} );
+		document.getElementById('gestureend').addEventListener("gestureend",function (event) { alert("gestureend");} );
 	</script>
 </body>
 </html>
