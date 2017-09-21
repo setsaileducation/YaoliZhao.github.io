@@ -3,60 +3,116 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-	<title>触屏事件</title>
+
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> <!-- 解决触屏设备不支持双击事件 双击浏览器窗口 会放大画面 -->
+
+	<title>触摸事件与手势事件</title>
+
 	<link rel="stylesheet" href="" />
-	<style type="text/css" media="screen">
-		div{
-			width: 85%;
-			height: 55px;
-			line-height: 55px;
-			text-align: center;
-			border-radius: 5px;
-			margin: 0 auto;
-			margin-bottom: 5px;
-			background-color: rgba(230, 58, 52,0.82);
-			color: rgba(205,205,205,1.0);
-		}
-	</style>
 </head>
 <body>
-	<div id="tap">tap</div>
-	<div id="click">click</div>
-	<div id="touchstart">touchstart</div>
-	<div id="touchmove">touchmove</div>
-	<div id="touchend">touchend</div>
-	<div id="touchcancel">touchcancel</div>
-	<div id="swipe">swipe</div>
-	<div id="swipeLeft">swipeLeft</div>
-	<div id="swipeRight">swipeRight</div>
-	<div id="swipeUp" style="height: 85px; line-height: 85px;">swipeUp</div>
-	<div id="swipeDown" style="height: 85px; line-height: 85px;">swipeDown</div>
-	<div id="longTap">longTap</div>
-	<div id="singleTap">singleTap</div>
-	<div id="doubleTap">doubleTap</div>
-	<div id="gesturestart">gesturestart</div>
-	<div id="gesturechange">gesturechange</div>
-	<div id="gestureend">gestureend</div>
-	
+	<!-- 触摸事件是随着触屏设备的出现而出现 -->
+	<!-- 随着触屏移动端设备的普及使用 W3C开始制定 TouchEvent 规范 -->
+
+	<!-- 使用触屏事件后 其他原来的鼠标事件部分不能用 -->
+		<!-- 鼠标事件 dbclick 触屏设备不支持双击事件 双击浏览器窗口 会放大画面 -->
+		<!-- 在触屏上 单击一个元素 会相应的触发 mousemove mousedown mouseup click 所以当编写移动客户端界面时 可以为元素直接添加 click 事件 可以提高效率 -->
+		<!-- touch 事件跟 click 事件是不会被同时触发的 现在的移动设备做的比较好 已经把这个问题完美的避免掉了 -->
+
+	<!-- 触摸事件 -->
+		<!-- 该类事件会在用户手指放在屏幕上面时 在屏幕上滑动时 或从屏幕上移开时触发 -->
+		<!-- 
+			touchstart	当手指放在屏幕上触发 手指放在一个DOM元素上 即使已经有一个手指放在了屏幕上也会触发
+			touchmove	当手指在屏幕上滑动时 连续地触发 手指拖曳一个DOM元素
+			touchend	当手指从屏幕上离开时触发 手指从一个DOM元素上移开
+			touchcancel	当系统停止跟踪时触发
+		 -->
+		<!-- 以上四个 是w3c提供的触摸事件 只针对触摸设备 最常用的是前三个 -->
+
+		<!-- 由于触摸会导致屏幕动来动去 所以可以会在这些事件的事件处理函数内使用 event.preventDefault() 来阻止屏幕的默认滚动 -->
+
+		<!-- 除了常用的DOM属性 触摸事件还包含下列三个用于跟踪触摸的属性 -->
+		<!-- 
+			touches			表示当前跟踪的触摸操作的touch对象的数组 当一个手指在触屏上时 event.touches.length=1 当两个手指在触屏上时 event.touches.length=2 以此类推
+			targetTouches	特定于事件目标的touch对象数组 因为触摸事件是会冒泡的 所以利用这个属性指出目标对象 特定于事件目标的 touch 对象数组
+			changedTouches	表示自上次触摸以来发生了什么改变的触摸对象的数组
+		 -->
+
+		<!-- 每个触摸对象都包含下列几个属性 -->
+		<!-- 
+			screenX	触摸目标在屏幕中的x坐标
+			screenY	触摸目标在屏幕中的y坐标
+			target	触摸的DOM节点目标
+		 -->
+
+	<div id="_div"></div>
+
 	<script>
-		document.getElementById('tap').addEventListener("tap",function (event) { alert("tap");} );
-		document.getElementById('click').addEventListener("click",function (event) { alert("click");} );
-		document.getElementById('touchstart').addEventListener("touchstart",function (event) { alert("touchstart");} );
-		document.getElementById('touchmove').addEventListener("touchmove",function (event) { alert("touchmove");} );
-		document.getElementById('touchend').addEventListener("touchend",function (event) { alert("touchend");} );
-		document.getElementById('touchcancel').addEventListener("touchcancel",function (event) { alert("touchcancel");} );
-		document.getElementById('swipe').addEventListener("swipe",function (event) { alert("swipe");} );
-		document.getElementById('swipeLeft').addEventListener("swipeLeft",function (event) { alert("swipeLeft");} );
-		document.getElementById('swipeRight').addEventListener("swipeRight",function (event) { alert("swipeRight");} );
-		document.getElementById('swipeUp').addEventListener("swipeUp",function (event) { alert("swipeUp");} );
-		document.getElementById('swipeDown').addEventListener("swipeDown",function (event) { alert("swipeDown");} );
-		document.getElementById('longTap').addEventListener("longTap",function (event) { alert("longTap");} );
-		document.getElementById('singleTap').addEventListener("singleTap",function (event) { alert("singleTap");} );
-		document.getElementById('doubleTap').addEventListener("doubleTap",function (event) { alert("doubleTap");} );
-		document.getElementById('gesturestart').addEventListener("gesturestart",function (event) { alert("gesturestart");} );
-		document.getElementById('gesturechange').addEventListener("gesturechange",function (event) { alert("gesturechange");} );
-		document.getElementById('gestureend').addEventListener("gestureend",function (event) { alert("gestureend");} );
+		var _div=document.getElementById('_div');
+		document.addEventListener('touchstart',function(event){
+		    _div.innerHTML=event.touches[0].clientX+','+event.touches[0].clientY;
+	    });
+	    document.addEventListener('touchmove',function(event){
+	        event.preventDefault();
+	        _div.innerHTML=event.touches[0].clientX; // 使用clientX时 必须要指明具体的 touch 对象 而不要直接指明数组 event.touches[0]
+	    });
+	    document.addEventListener('touchend',function(event){
+	        _div.innerHTML=event.changedTouches[0].clientY; // 在 touchend 事件处理函数中 当该事件发生时 touches 里面已经没有任何的touch对象了 此时就要使用changeTouches集合
+	    });
+	</script>
+
+	<!-- 
+		手势事件
+		gesturestart	当一个手指已经按在屏幕上 而另一个手指又触摸在屏幕时触发
+		gesturechange	当触摸屏幕的任何一个手指的位置发生变化时触发
+		gestureend		当任何一个手指从屏幕上面移开时触发
+
+		只有两个手指都触摸到事件的接收容器时才触发这些手势事件
+	 -->
+
+ 	<!-- 
+	 	触摸事件与手势事件之间的关系
+	 	当一个手指放在屏幕上时 会触发 touchstart 事件 如果另一个手指又放在了屏幕上 则会触发 gesturestart 事件 随后触发基于该手指的 touchstart 事件
+	 	如果一个或两个手指在屏幕上滑动 将会触发 gesturechange 事件 但只要有一个手指移开 则会触发 gestureend 事件 紧接着又会触发 toucheend 事件
+	 -->
+
+	<!-- 
+	  	手势的专有属性
+	  	rotation 表示手指变化引起的旋转角度 负值表示逆时针 正值表示顺时针 从零开始
+	  	scale 表示两个手指之间的距离情况 向内收缩会缩短距离 这个值从 1 开始 并随距离拉大而增长
+	 -->
+
+	 <!-- 触屏事件中 事件对象 event 包含了类型均为TouchList[数组] -->
+
+	<div id="_out"></div>
+
+	<script type="text/javascript">
+	 	var _output = document.getElementById("_out");
+
+	 	var _content = '';
+
+	 	function GestureEvent(event) {
+	 		switch(event.type) {
+	 			case "gesturestart":
+	 				_content = "Gesture started(rotation=" + event.rotation + ",scale=" + event.scale + ")";
+	 				_output.innerHTML = _content;
+	 			break;
+
+	 			case "gesturechange":
+	 				_content += "<br>Gesture changed(rotation=" + event.rotation + ",scale=" + event.scale + ")";
+	 				_output.innerHTML = _content;
+	 			break;
+
+	 			case "gestureend":
+	 				_content += "<br>Gesture ended(rotation=" + event.rotation + ",scale=" + event.scale + ")";
+	 				_output.innerHTML = _content;
+	 			break;
+	 		}
+	 	}
+
+	 	document.addEventListener("gesturestart", GestureEvent, false);
+	 	document.addEventListener("gestureend", GestureEvent, false);
+	 	document.addEventListener("gesturechange", GestureEvent, false);
 	</script>
 </body>
 </html>
